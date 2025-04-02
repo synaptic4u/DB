@@ -1,0 +1,34 @@
+{
+    "name": "synaptic4u/db",
+    "description": "Database wrapper class for PDO MYSQL to enable custom scripting",
+    "type": "library",
+    "keywords": ["mysql"],
+    "homepage": "https://github.com/synaptic4u/synaptic4u",
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Synaptic4U\\": "./src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emile De Wilde",
+            "email": "synaptic4u@gmail.com",
+            "homepage": "https://github.com/synaptic4u/synaptic4u",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "email": "synaptic4u@gmail.com"
+    }, 
+    "funding": [
+        {
+            "type": "patreon",
+            "url": "https://www.patreon.com/synaptic4u"
+        }
+    ]
+} 
