@@ -36,7 +36,7 @@ class MYSQL implements IDBInterface
         }
     }
 
-    public function query($params, $sql): mixed
+    public function query($params, $sql)
     {
         try {
             $stmt = null;
@@ -84,7 +84,7 @@ class MYSQL implements IDBInterface
         return $this->rowcount;
     }
 
-    public function getStatus(): mixed
+    public function getStatus()
     {
         return $this->status;
     }
