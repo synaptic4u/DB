@@ -14,6 +14,14 @@ To install the package, use Composer:
 composer require synaptic4u/db
 ```
 
+## Test
+
+To test the package, run in terminal (Linux CLI) of the project's root directory:
+
+```bash 
+php tests/DBTest.php
+```
+
 ## Usage
 
 Here's a basic example of how to use the DB package:
