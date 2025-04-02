@@ -46,47 +46,27 @@ function getCount()
     return $table_report;
 }
 
-    print_r('App timer: '.date('Y-m-d H:i:s').PHP_EOL);
+    print_r('Connects to a DB and counts all rows in all tables.'.PHP_EOL.PHP_EOL);
+
+
     $start = microtime(true);
 
-    print_r('The report sleeps for 10 sec to calculate the active process.'.PHP_EOL);
-    print_r('With large tables, it may take longer.'.PHP_EOL.PHP_EOL);
-
     $report = getCount();
-
-    sleep(10);
-
-    $report2 = getCount();
-
-    $diff = array_diff($report, $report2);
-
-    foreach ($diff as $key => $value) {
-        $report[$key] = [
-            'status' => 'Active',
-            'count1' => $report[$key],
-            'count2' => $report2[$key],
-            'difference' => $report2[$key] - $report[$key],
-        ];
-    }
-
-    $tot_records = array_sum($report2);
 
     $finish = microtime(true);
 
     $app_timer = [
         'Date & Time:               ' => date('Y-m-d H:i:s', time()),
-        'Total records:             ' => number_format($tot_records),
-        // 'Start:                     ' => $start,
-        // 'Finish:                    ' => $finish,
+        'Start:                     ' => $start,
+        'Finish:                    ' => $finish,
         'Duration min:sec:          ' => (($finish - $start) > 60) ? (floor(($finish - $start) / 60)).':'.(($finish - $start) % 60) : '0:'.(($finish - $start) % 60),
         'Duration sec.microseconds: ' => $finish - $start,
     ];
 
-    print_r('Total records: '.number_format($tot_records).PHP_EOL);
-    print_r('App Stats: '.json_encode($app_timer, JSON_PRETTY_PRINT).PHP_EOL.PHP_EOL);
+    print_r('Test Stats: '.json_encode($app_timer, JSON_PRETTY_PRINT).PHP_EOL.PHP_EOL);
 
     $result = array_merge([
         'Table names' => 'Rows per table',
     ], $report);
 
-    print_r('DB Stats: '.json_encode($report, JSON_PRETTY_PRINT).PHP_EOL);
+    print_r('DB Row count for each table: '.json_encode($report, JSON_PRETTY_PRINT).PHP_EOL);
