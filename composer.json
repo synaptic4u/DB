@@ -3,7 +3,7 @@
     "description": "Database wrapper class for PDO MYSQL to enable custom scripting",
     "type": "library",
     "keywords": ["mysql"],
-    "homepage": "https://github.com/synaptic4u/synaptic4u",
+    "homepage": "https://github.com/synaptic4u",
     "require": {
         "php": ">=7.4",
         "ext-pdo": "*"
