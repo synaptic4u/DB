@@ -1,65 +1,65 @@
-# DB Package
+    # DB Package
 
-The DB package is a database wrapper class for PDO, enabling custom scripting and simplifying database interactions within your PHP applications.
+    The DB package is a database wrapper class for PDO, enabling custom scripting and simplifying database interactions within your PHP applications.
 
-## Overview
+    ## Overview
 
-This package provides an interface and implementation for database operations using PDO. It includes classes for handling database connections and executing queries with ease, allowing for more maintainable and secure database interactions.
+    This package provides an interface and implementation for database operations using PDO. It includes classes for handling database connections and executing queries with ease, allowing for more maintainable and secure database interactions.
 
-## Installation
+    ## Installation
 
-To install the package, use Composer:
+    To install the package, use Composer:
 
-```bash
-composer require synaptic4u/db
-```
+    ```bash
+    composer require synaptic4u/db
+    ```
 
-## Test
+    ## Test
 
-To test the package, run in terminal (Linux CLI) of the project's root directory:
+    To test the package, run in terminal (Linux CLI) of the project's root directory:
 
-```bash 
-php tests/DBTest.php
-```
+    ```bash 
+    php tests/DBTest.php
+    ```
 
-## Usage
+    ## Usage
 
-Here's a basic example of how to use the DB package:
+    Here's a basic example of how to use the DB package:
 
-```php
-use Synaptic4U\DB\DB;
-use Synaptic4U\DB\MYSQL;
+    ```php
+    use Synaptic4U\DB\DB;
+    use Synaptic4U\DB\MYSQL;
 
-// Initialize the database connection
-$db = new DB(new MYSQL());
+    // Initialize the database connection
+    $db = new DB(new MYSQL());
 
-// Execute a query with parameters
-$result = $db->query(['param1' => 'value1'], 'SELECT * FROM table WHERE column = :param1');
+    // Execute a query with parameters
+    $result = $db->query(['param1' => 'value1'], 'SELECT * FROM table WHERE column = :param1');
 
-// Process the results
-foreach ($result as $row) {
-    // Handle each row
-}
-```
+    // Process the results
+    foreach ($result as $row) {
+        // Handle each row
+    }
+    ```
 
-## Features
+    ## Features
 
-- PDO-based database abstraction
-- Prepared statements for secure queries
-- Support for multiple database types
-- Simple and intuitive API
-- Error handling and logging
+    - PDO-based database abstraction
+    - Prepared statements for secure queries
+    - Support for multiple database types
+    - Simple and intuitive API
+    - Error handling and logging
 
-## Contributing
+    ## Contributing
 
-Contributions are welcome! Please follow these steps:
+    Contributions are welcome! Please follow these steps:
 
-1. Fork the repository
-2. Create a new branch for your feature or bugfix
-3. Write tests for your changes
-4. Ensure all tests pass
-5. Submit a pull request
+    1. Fork the repository
+    2. Create a new branch for your feature or bugfix
+    3. Write tests for your changes
+    4. Ensure all tests pass
+    5. Submit a pull request
 
-## License
+    ## License
 
-This package is open-source and available under the MIT License.
+    This package is open-source and available under the MIT License.
