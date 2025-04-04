@@ -5,12 +5,13 @@
     "keywords": ["mysql"],
     "homepage": "https://github.com/synaptic4u",
     "require": {
+        "synaptic4u/logging": "dev-master",
         "php": ">=7.4",
         "ext-pdo": "*"
     },
     "autoload": {
         "psr-4": {
-            "Synaptic4U\\": "./src"
+            "Synaptic4U\\": ["./src", "./vendor/synaptic4u/logging/src"]
         }
     },
     "license": "MIT",
