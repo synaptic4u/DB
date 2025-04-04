@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Synaptic4U\\": ["./src", "./vendor/synaptic4u/logging/src"]
+            "Synaptic4U\\": ["src"] 
         }
     },
     "license": "MIT",
