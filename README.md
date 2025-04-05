@@ -8,7 +8,7 @@
 
     ## Installation
 
-    To install the package, use Composer:
+    To install the package to your existing application, use Composer:
 
     ```bash
     composer require synaptic4u/db
